@@ -36,15 +36,16 @@ export default function ContactForm() {
 
     try {
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_API_URL}/api/contacts`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        }
-      );
+  `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/contacts`,
+  {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(formData),
+  }
+);
+
 
       const result = await response.json();
 
